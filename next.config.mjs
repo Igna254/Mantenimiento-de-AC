@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production'
+const isGithubPages = process.env.GITHUB_PAGES === 'true'
 const repoBasePath = '/Mantenimiento-de-AC'
 
 const nextConfig = {
@@ -10,7 +10,7 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  ...(isProd
+  ...(isGithubPages
     ? {
         basePath: repoBasePath,
         assetPrefix: repoBasePath,

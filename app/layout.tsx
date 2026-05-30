@@ -6,7 +6,7 @@ import './globals.css'
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadataBase =
-  process.env.NODE_ENV === 'production'
+  process.env.GITHUB_PAGES === 'true'
     ? new URL('https://igna254.github.io/Mantenimiento-de-AC')
     : new URL('http://localhost:3000')
 

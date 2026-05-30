@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
-    "predeploy": "next build && next export",
-    "deploy": "gh-pages -d out/Mantenimiento-de-AC",
+    "predeploy": "cross-env GITHUB_PAGES=true next build",
+    "deploy": "cross-env GITHUB_PAGES=true gh-pages -d out",
     "start": "next start",
     "lint": "eslint ."
   },
@@ -67,6 +66,7 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^7.0.3",
     "gh-pages": "^5.0.0",
     "postcss": "^8.5",
     "tailwindcss": "^4.2.0",
