@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "predeploy": "next build && next export",
+    "deploy": "gh-pages -d out/Mantenimiento-de-AC",
     "start": "next start",
     "lint": "eslint ."
   },
@@ -64,6 +67,7 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.5",
     "tailwindcss": "^4.2.0",
     "tw-animate-css": "1.3.3",

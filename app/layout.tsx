@@ -5,6 +5,11 @@ import './globals.css'
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
+export const metadataBase =
+  process.env.NODE_ENV === 'production'
+    ? new URL('https://igna254.github.io/Mantenimiento-de-AC')
+    : new URL('http://localhost:3000')
+
 export const metadata: Metadata = {
   title: 'ClimaElec Pro | Aires Acondicionados y Servicios Eléctricos',
   description: 'Expertos en instalación, mantenimiento y reparación de aires acondicionados. Servicios eléctricos residenciales, comerciales e industriales. Personal certificado y garantía en todos nuestros trabajos.',
